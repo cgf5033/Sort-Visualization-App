@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, SafeAreaView } from 'react-native';
-import styled from 'styled-components/native';
+import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-native';
 
 export default function Sort() {
 
@@ -24,8 +23,11 @@ export default function Sort() {
       {array.map(val => (
         <View key={Math.random()} style={{
           height: 500*val,
-          width: 25,
+          width: 5,
           backgroundColor: 'red',
+          padding: 2,
+          border: 5,
+          borderColor: '#fff',
         }} />
       ))}
     </Text>
