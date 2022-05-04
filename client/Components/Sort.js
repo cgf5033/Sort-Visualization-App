@@ -1,8 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Button, TouchableOpacity, SafeAreaView } from 'react-native';
+import styled from 'styled-components/native';
 
-export default function App() {
+export default function Sort() {
 
   const randomBars = () => {
     const arr = [];

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity, SafeAreaView } from 'react-native';
 import styled from 'styled-components/native';
+import Header from './Components/Header';
 import Sort from './Components/Sort';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Algo Sort</Text>
+      <Header />
       <Sort />
       <TouchableOpacity title='Sort' onPress={() => console.log('Pee')}/>
       <TouchableOpacity onPress={() => console.log('Pee')} style={{
