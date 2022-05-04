@@ -1,15 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Button, TouchableOpacity, SafeAreaView } from 'react-native';
+import styled from 'styled-components/native';
 import Sort from './Components/Sort';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Algo Sort</Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Algo Sort</Text>
       <Sort />
-      <Button title='Sort' onClick={() => console.log('Hello!!')}/>
-      <Button title='Reset' onClick={() => console.log('Hello!!')}/>
-    </View>
+      <TouchableOpacity title='Sort' onPress={() => console.log('Pee')}/>
+      <TouchableOpacity onPress={() => console.log('Pee')} style={{
+        backgroundColor: 'blue',
+        width: '50%',
+        height: '5%',
+        borderRadius: '5px',
+        padding: '5px',
+      }}><Text>Heyy</Text></TouchableOpacity>
+      <TouchableOpacity onPress={() => console.log('Pee')} style={{
+        backgroundColor: 'blue',
+        width: '50%',
+        height: '5%',
+        borderRadius: '5px',
+        padding: '5px',
+      }}><Text>Heyy</Text></TouchableOpacity>
+    </SafeAreaView>
   );
 }
 
@@ -18,7 +32,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
+  },
+  title: {
+    fontSize: 28,
+
   },
 
 });
