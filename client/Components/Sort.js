@@ -1,35 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-native';
 
-export default function Sort() {
-
-  const randomBars = () => {
-    const arr = [];
-    for (let i = 0; i < 12; i++) {
-      arr.push(Math.random())
-    }
-    return arr;
-  }
-
-  const [array, setArray] = useState(randomBars());
-
+export default function Sort(props) {
+  // const [array, setArray] = useState(props.array);
   // useEffect(() => {
   //   setArray(randomBars());
   // })
 
 
+
   return (
-    <Text>
-      {array.map(val => (
-        <View key={Math.random()} style={{
-          height: 500*val,
-          width: 5,
-          backgroundColor: 'red',
-          padding: 2,
-          border: 5,
-          borderColor: '#fff',
-        }} />
-      ))}
-    </Text>
+    <View>
+      <Text>
+        {props.array.map(val => (
+          <View key={Math.random()} style={{
+            height: val,
+            width: 25,
+            backgroundColor: 'red',
+            padding: 3,
+            border: 5,
+            borderColor: 'black',
+            borderRadius: 2,
+          }} />
+        ))}
+      </Text>
+    </View>
   );
 }
