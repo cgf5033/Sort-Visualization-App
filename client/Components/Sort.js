@@ -2,12 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-native';
 
 export default function Sort(props) {
-  // const [array, setArray] = useState(props.array);
-  // useEffect(() => {
-  //   setArray(randomBars());
-  // })
-
-
 
   return (
     <View>
@@ -15,11 +9,11 @@ export default function Sort(props) {
         {props.array.map(val => (
           <View key={Math.random()} style={{
             height: val,
-            width: 25,
+            width: 2,
             backgroundColor: 'red',
-            padding: 3,
-            border: 5,
-            borderColor: 'black',
+            padding: 2,
+            border: 2,
+            // borderColor: 'black',
             borderRadius: 2,
           }} />
         ))}

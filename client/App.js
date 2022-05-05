@@ -11,7 +11,7 @@ import Sort from './Components/Sort';
 
 const randomBars = () => {
   const arr = [];
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 80; i++) {
     arr.push(Math.random()*500)
   }
   return arr;
@@ -20,7 +20,7 @@ const delay = () => {
   return new Promise((res, rej) => {
     setTimeout(() => {
       res();
-    }, 100)
+    }, 20)
   })
 }
 const bubbleSort = async (Array, setArray) => {
@@ -29,10 +29,8 @@ const bubbleSort = async (Array, setArray) => {
     var temp = a[index1];
     a[index1] = a[index2];
     a[index2] = temp;
-    // console.log('this is a: ', a);
     setArray([...a]);
     await delay();
-    // turn isSwapped to false
     return a;
   };
 
@@ -48,7 +46,6 @@ const bubbleSort = async (Array, setArray) => {
     if (!swaps) { break; }
   }
   setArray(arr);
-  // return arr;
 };
 
 //SelectionSort??
@@ -72,19 +69,25 @@ export default function App() {
         <View style={styles.sort}>
           <Sort array={array}/>
         </View>
-      </View>
         <TouchableOpacity
           onPress={onSortClick}
           style={styles.button}
-        >
-          <Text style={styles.buttonText}>Sort</Text>
+          >
+          <Text style={styles.buttonText}>Bubble Sort</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => console.log('Selection Sort')}
+          style={styles.button}
+          >
+          <Text style={styles.buttonText}>Selection Sort</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={onResetClick}
           style={styles.button}
-        >
+          >
           <Text style={styles.buttonText}>Reset</Text>
         </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
