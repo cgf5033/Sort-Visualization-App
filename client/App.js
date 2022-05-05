@@ -69,24 +69,26 @@ export default function App() {
         <View style={styles.sort}>
           <Sort array={array}/>
         </View>
-        <TouchableOpacity
-          onPress={onSortClick}
-          style={styles.button}
-          >
-          <Text style={styles.buttonText}>Bubble Sort</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => console.log('Selection Sort')}
-          style={styles.button}
-          >
-          <Text style={styles.buttonText}>Selection Sort</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={onResetClick}
-          style={styles.button}
-          >
-          <Text style={styles.buttonText}>Reset</Text>
-        </TouchableOpacity>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity
+            onPress={onSortClick}
+            style={styles.button}
+            >
+            <Text style={styles.buttonText}>Bubble Sort</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => console.log('Selection Sort')}
+            style={styles.button}
+            >
+            <Text style={styles.buttonText}>Selection Sort</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={onResetClick}
+            style={styles.button}
+            >
+            <Text style={styles.buttonText}>Reset</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -96,24 +98,27 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
   content: {
     alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: '100%',
   },
-  sort: {},
+  buttonContainer: {
+    position: 'absolute',
+    bottom: 120,
+  },
   button: {
     backgroundColor: 'red',
-    width: '70%',
+    width: 300,
     margin: 5,
     display: 'flex',
-    // height: '5%',
     borderRadius: 5,
     padding: 15,
     justifyContent: 'center',
     alignItems: 'center',
-
   },
   buttonText: {
     fontSize: 20,

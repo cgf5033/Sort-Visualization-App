@@ -13,7 +13,6 @@ export default function Sort(props) {
             backgroundColor: 'red',
             padding: 2,
             border: 2,
-            // borderColor: 'black',
             borderRadius: 2,
           }} />
         ))}

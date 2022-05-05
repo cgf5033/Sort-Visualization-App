@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-na
 export default function Header() {
   return (
     <View style={styles.header}>
-      <Text style={styles.text}>Algo Sort</Text>
+      <Text style={styles.text}>Sort Visualization</Text>
     </View>
   );
 }
@@ -12,11 +12,9 @@ export default function Header() {
 const styles = StyleSheet.create({
   header: {
     height: 60,
-    // padding: 10,
     backgroundColor: 'red',
     marginBottom: '5%',
     alignItems: 'stretch',
-
   },
 
   text: {
@@ -24,5 +22,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'center',
     fontWeight: 'bold',
+    marginTop: 10,
   }
 });
