@@ -20,7 +20,7 @@ const delay = () => {
   return new Promise((res, rej) => {
     setTimeout(() => {
       res();
-    }, 20)
+    }, 5)
   })
 }
 const bubbleSort = async (Array, setArray) => {
