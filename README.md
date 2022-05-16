@@ -1,2 +1,3 @@
 # mvp
-Minimum Viable Product
+Sort Visualization Mobile Application
+
